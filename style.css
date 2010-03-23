@@ -1,0 +1,36 @@
+html,body{height:100%;color:black;}
+body{
+  background-color:white;
+  font-family: helvetica,arial,freesans,clean,sans-serif;
+  font-size:small;
+}
+
+pre,code{
+  margin-left: 2em;
+  font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font-size:90%;
+  background-color:#FFE;
+}
+
+body *{line-height:1.4em;}
+table.gallery {
+  text-align: center;
+}
+
+table.galleryitem, table.galleryitembottom a{
+  text-align: center;
+  background:#cc9;
+}
+div.center {
+  text-align:center;
+}
+div.center a {
+  font-weight: normal;
+}
+h1 {
+  font-size: 110%;
+  font-weight: bold;
+  padding: 0em 0em 0em 0em;
+  margin-top: -0.5em;
+  margin-bottom: -1.0em;
+}
