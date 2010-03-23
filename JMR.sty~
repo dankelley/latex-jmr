@@ -1,0 +1,46 @@
+\def\fileversion{0.2}
+\def\filedate{2008/09/21}
+\ProvidesClass{JMR}[2008/09/21 J Marine Research]
+\usepackage{graphicx}           % for \includegraphics{}
+\DeclareOption{final}{%
+  \renewcommand{\includegraphics}[2][]{\medskip {\bf Figure file: #2}}%
+  \def\fps@figure{p} % see article.cls line 463
+}
+\ProcessOptions
+
+\usepackage{times}              % cleaner font (optional)
+\usepackage{setspace}           % for \doublespacing
+\usepackage{lineno}             % for line numbering, if desired
+\usepackage[left=4cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% For natbib details, see e.g.
+%   http://merkel.zoneo.net/Latex/natbib.php
+\usepackage{natbib}             % to permit natbib bibliography style
+\renewcommand{\refname}{\begin{center}REFERENCES\end{center}}
+\bibpunct[; ]{(}{)}{;}{a}{,}{;}
+
+\doublespacing
+
+\setlength{\parindent}{4ex}
+
+\renewcommand*\abstractname{ABSTRACT}
+
+% For section-heading details, see e.g.
+%   http://help-csli.stanford.edu/tex/latex-sections.shtml
+\setcounter{secnumdepth}{3}
+\def\thesection{\arabic{section}.}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+   {3.0ex \@plus 1.0ex \@minus 0.5ex}%
+   {0.1ex \@plus 0.1ex \@minus 0.1ex}%
+   {\normalfont\large\bfseries}}
+\def\thesubsection{\alph{subsection}.}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+   {2.5ex \@plus 1.0ex \@minus 0.5ex}%
+   {0.1ex \@plus 0.1ex \@minus 0.1ex}%
+   {\normalfont\large\itshape}}
+\def\thesubsubsection{\roman{subsubsection}.}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+   {2.5ex \@plus 1.0ex \@minus 0.5ex}%
+   {-1.0em \@plus -0.2em \@minus 0.2em}%
+   {\normalfont\itshape}}
+
