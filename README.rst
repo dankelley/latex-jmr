@@ -43,19 +43,25 @@ Journal of Marine Research. Using this style involves the following steps.
    references within sentences and e.g. "something good (Fig. 1)" for references in
    parentheses.
 
-4. JMR mode does not handle figure-placement commands well, so you must change e.g.
+4. JMR wants figures on separate pages, so you should put them at the
+   end of your file, and use "page" placement, as follows:
    ::
 
-       \begin{figure}[ht]
+       \begin{figure}[p!]
 
-   to the less imperative form
+   To get captions as they want, do e.g.
    ::
 
-       \begin{figure}
+       \caption[the real caption here]{\label{figure_label}}
 
-   If you wish to control figure placement in your review copy, that's fine. 
-   Just remember to remove the placement commands on the final copy, to get the
-   figure captions at the end, as is required by the journal.
+   (that is, have an empty caption below the figure, and use the
+   square-bracket part of the caption for the real caption), and then
+   put a
+   ::
+
+   \listoffigures
+
+   command somewhere appropriate (perhaps at the end of the text).
 
 5. If you are accustomed to using AGU-style literature citations, please note that JMR
    style cannot handle e.g.
