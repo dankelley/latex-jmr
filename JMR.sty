@@ -28,19 +28,24 @@
 % For section-heading details, see e.g.
 %   http://help-csli.stanford.edu/tex/latex-sections.shtml
 \setcounter{secnumdepth}{3}
-\def\thesection{\arabic{section}.}
+\def\thesection{\arabic{section}}
 \renewcommand\section{\@startsection{section}{1}{\z@}%
    {3.0ex \@plus 1.0ex \@minus 0.5ex}%
    {0.1ex \@plus 0.1ex \@minus 0.1ex}%
    {\normalfont\large\bfseries}}
-\def\thesubsection{\alph{subsection}.}
+\def\thesubsection{\alph{subsection}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
    {2.5ex \@plus 1.0ex \@minus 0.5ex}%
    {0.1ex \@plus 0.1ex \@minus 0.1ex}%
    {\normalfont\large\itshape}}
-\def\thesubsubsection{\roman{subsubsection}.}
+\def\thesubsubsection{\roman{subsubsection}}
 % subsubsections are ``run-in'' style
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
    {2.5ex \@plus 1.0ex \@minus 0.5ex}%
    {-1.0em \@plus -0.2em \@minus 0.2em}%
    {\normalfont\itshape}}
+
+\makeatletter
+\renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}
+\makeatother
+

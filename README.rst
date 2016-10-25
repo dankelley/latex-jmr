@@ -1,6 +1,6 @@
-=========
-JMR style
-=========
+===========================
+1. How to use the JMR style
+===========================
 
 The files JMR.sty and JMR.bst are used to typeset articles for submission to the
 Journal of Marine Research. Using this style involves the following steps.
@@ -75,3 +75,14 @@ Journal of Marine Research. Using this style involves the following steps.
        (see \cite[]{author})
 
    instead.
+
+
+======================================
+2. History of changes to the JMR style
+======================================
+
+* 2016-10-25 change according to code written by an unnamed author, and
+  transmitted to Dan Kelley on 2016-10-19 by Shannon Giacobbe, the JMR
+  Publication Assistant.
+
+
